@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="40.802" tests="3" skipped="0" failures="1" errors="0">
+<testcase classname="Customers" name="Add New Customer" time="23.33">
+<system-out><![CDATA[
+Given User Launch the "Chrome" browser and opens URL "http://admin-demo.nopcommerce.com/login".passed
+And User enters Email "admin@yourstore.com" and Password  "admin"...........passed
+And Click on the Login......................................................passed
+Then User can view the Dashboad.............................................passed
+When User click on customers Menu...........................................passed
+And click on customers Menu Item............................................passed
+And click on Add new button.................................................passed
+Then User can view Add new customer page....................................passed
+When User enter customer info 13............................................passed
+And click on Save button....................................................passed
+Then User can view confirmation message "The new customer has been added successfully.".passed
+And Enter customer Email....................................................passed
+When Click on search button.................................................passed
+And close the browser.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with InValid  and valid Credentials - Example #1.1" time="11.864">
+<system-out><![CDATA[
+Given User Launch "Chrome" browser and opens URL "http://admin-demo.nopcommerce.com/login".passed
+When User enters Email as admin@yourstore.com and Password as admin.........passed
+And Click on Login..........................................................passed
+Then Page Title should be "Dashboard / nopCommerce administration"..........passed
+When User click on Log out link.............................................passed
+Then Page Title should be "Your store. Login"...............................passed
+And close browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with InValid  and valid Credentials - Example #1.2" time="5.253">
+<failure type="org.openqa.selenium.NoSuchSessionException" message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=//a[text()='Logout'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Sweet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53984}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53984/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}">
+<![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {value=//a[text()='Logout'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Sweet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53984}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53984/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at Stepdefination.Loginstepdf.user_click_on_log_out_link(Loginstepdf.java:63)
+	at ✽.User click on Log out link(file:///C:/Users/Sweet/eclipse-workspace/CucumbernNop/src/test/resources/Features/login.feature:18)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch "Chrome" browser and opens URL "http://admin-demo.nopcommerce.com/login".passed
+When User enters Email as test@yourstore.com and Password as admin..........passed
+And Click on Login..........................................................passed
+Then Page Title should be "Dashboard / nopCommerce administration"..........passed
+When User click on Log out link.............................................failed
+Then Page Title should be "Your store. Login"...............................skipped
+And close browser...........................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
